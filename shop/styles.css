@@ -2,24 +2,64 @@ body {
     font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
+    background-color: #161616; /* Set the background color */
+    color: #fff; /* Set text color to white for better contrast */
 }
 
+/* Apply a background color and center the header content */
 header {
-    background-color: #f0f0f0;
-    padding: 20px;
+    background-color: #161616;
+    color: #fff;
     text-align: center;
+    padding: 20px;
 }
-
+/* Style the search input and button */
 #searchInput {
-    padding: 5px;
-    font-size: 14px;
+    padding: 10px;
+    font-size: 16px;
+    width: 40%; /* Adjust the width as needed */
+    border: none;
+    border-radius: 5px 0 0 5px;
 }
 
 #searchButton {
-    padding: 5px 10px;
-    font-size: 14px;
-    background-color: #007bff;
+    padding: 10px 20px;
+    font-size: 16px;
+    background-color: #ff9800;
     color: #fff;
     border: none;
+    border-radius: 0 5px 5px 0;
     cursor: pointer;
+}
+
+
+/* Style the product listings */
+.product {
+    border: 1px solid #ddd;
+    padding: 15px;
+    margin: 10px;
+    border-radius: 5px;
+    background-color: #fff;
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+/* Add hover effect for products */
+.product:hover {
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+/* Add a loading spinner */
+.loading {
+    display: inline-block;
+    border: 4px solid rgba(0, 0, 0, 0.1);
+    border-top: 4px solid #007bff;
+    border-radius: 50%;
+    width: 20px;
+    height: 20px;
+    animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
 }
