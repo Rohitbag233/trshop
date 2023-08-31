@@ -1,3 +1,14 @@
+
+/* Apply mobile styles using media queries */
+@media (max-width: 768px) {
+    /* Adjust styles for smaller screens */
+    #searchInput {
+        font-size: 14px;
+    }
+    
+    /* ... Add more mobile-specific styles ... */
+}
+
 body {
     font-family: Arial, sans-serif;
     margin: 0;
@@ -62,4 +73,18 @@ header {
 @keyframes spin {
     0% { transform: rotate(0deg); }
     100% { transform: rotate(360deg); }
+}
+
+
+
+/* Apply a transition effect */
+.product {
+    /* ... Existing styles ... */
+    transition: opacity 0.3s ease;
+}
+
+/* Add hover effect for products */
+.product:hover {
+    /* ... Existing styles ... */
+    opacity: 0.9; /* Reduce opacity on hover */
 }

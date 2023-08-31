@@ -29,13 +29,27 @@ document.addEventListener("DOMContentLoaded", () => {
     });
 
     async function fetchProducts(searchQuery) {
+        const endpoint = 'YOUR_AMAZON_API_ENDPOINT'; // Replace with your actual Amazon API endpoint
+        const accessKey = 'YOUR_ACCESS_KEY'; // Replace with your actual Access Key
+        const secretKey = 'YOUR_SECRET_KEY'; // Replace with your actual Secret Key
+        const associateTag = 'YOUR_ASSOCIATE_TAG'; // Replace with your actual Associate Tag
+    
+        // Construct the URL for the API request
+        const url = `${endpoint}?Service=AWSECommerceService&Operation=ItemSearch&Keywords=${encodeURIComponent(searchQuery)}&AssociateTag=${associateTag}`;
+    
         try {
-            // Replace `YOUR_API_ENDPOINT` with your actual API endpoint
-            const response = await fetch(`YOUR_API_ENDPOINT?q=${searchQuery}`);
+            const response = await fetch(url, {
+                method: 'GET',
+                headers: {
+                    'Content-Type': 'application/json',
+                    // Add any necessary authorization headers here
+                },
+            });
+    
             const data = await response.json();
-
-            if (data && data.products) {
-                displayProducts(data.products);
+    
+            if (data && data.Items && data.Items.Item) {
+                displayProducts(data.Items.Item);
             } else {
                 // Handle error or no results
             }
@@ -43,7 +57,7 @@ document.addEventListener("DOMContentLoaded", () => {
             // Handle fetch error
         }
     }
-
+    
     function displayProducts(products) {
         productList.innerHTML = products.map(product => `
             <div class="product">

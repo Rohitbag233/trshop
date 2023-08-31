@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="shop\styles.css">
     <title>Amazon Affiliate Website</title>
 </head>
 <body>
@@ -11,8 +11,18 @@
         <h1>Welcome to our <big> Tr Shop</big> </h1>
         <input type="text" id="searchInput" placeholder="Search for products">
         <button id="searchButton">Search</button>
+        <!-- Add sorting and filtering controls -->
+        <div id="controls">
+         <label for="sort">Sort by:</label>
+          <select id="sort">
+              <option value="price">Price:low to High </option>
+              <option value="price">Price:High to low </option>
+              <option value="relevance">Relevance</option>
+           </select>
+        </div>
+
     </header>
     <main id="productList"></main>
-    <script src="script.js"></script>
+    <script src="shop\script.js"></script>
 </body>
 </html>
