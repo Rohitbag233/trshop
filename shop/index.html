@@ -3,26 +3,29 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="shop\styles.css">
-    <title>Amazon Affiliate Website</title>
+    <title>Your Web Page</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <header>
-        <h1>Welcome to our <big> Tr Shop</big> </h1>
-        <input type="text" id="searchInput" placeholder="Search for products">
-        <button id="searchButton">Search</button>
-        <!-- Add sorting and filtering controls -->
-        <div id="controls">
-         <label for="sort">Sort by:</label>
-          <select id="sort">
-              <option value="price">Price:low to High </option>
-              <option value="price">Price:High to low </option>
-              <option value="relevance">Relevance</option>
-           </select>
+    <header class="logo-navbar">
+        <div class="logo">
+            <a href="https://rohitbag233.github.io/Tiger-Rohit/"><img src="img\logo.png" alt="Logo"></a>
         </div>
-
     </header>
-    <main id="productList"></main>
-    <script src="shop\script.js"></script>
+    <main>
+        <div class="bg-image"></div>
+        <div class="search-bar-container">
+            <div class="search-bar">
+                <input type="text" placeholder="Search">
+                <button type="submit"><img src="img\search-icon.png" alt="Search"></button>
+            </div>
+        </div>
+        <div class="content-container">
+            <div class="centered-text">
+                <h1>Get Your Product <br> From <br><img src="img\amazon logo.png"></h1>
+            </div>
+        </div>
+    </main>
 </body>
 </html>

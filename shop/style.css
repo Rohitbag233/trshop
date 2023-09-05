@@ -1,0 +1,114 @@
+/* Reset default margin on the body */
+body {
+  margin: 0;
+  overflow: hidden; /* Hide any potential overflow */
+}
+
+/* Style the logo and navigation bar */
+.logo-navbar {
+  background-color: rgba(255, 255, 255, 0.0);
+  color: #fff;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 20px;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 999;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+}
+
+.logo img {
+  max-height: 80px;
+  width: auto;
+}
+
+/* Style the main content */
+main {
+  position: relative;
+  background-image: url('https://vip-go.shutterstock.com/blog/wp-content/uploads/sites/5/2020/05/shutterstock_407554567.jpg');
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  height: 100vh;
+  z-index: 0; /* Add a z-index to send it to the background */
+}
+
+.content-container {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 100%;
+  text-align: center;
+  z-index: 1; /* Add a z-index to bring it to the foreground */
+}
+
+.centered-text h1 {
+  color: rgba(255, 255, 255, 0.55);
+  margin: 1px 10px;
+  font-size: 40px;
+  font-family: 'Poppins', sans-serif;
+  font-weight: 800;
+}
+
+/* Style the Amazon logo image */
+.centered-text img {
+  max-width: 20%;
+  height: auto;
+}
+
+/* Center the search bar */
+.search-bar-container {
+  display: flex;
+  justify-content: center;
+  position: relative; /* Add relative positioning */
+  z-index: 2; /* Add a z-index to bring it to the foreground */
+}
+
+.search-bar {
+  width: 100%;
+  max-width: 50%;
+  background: rgba(255, 255, 255, 0.2);
+  display: flex;
+  align-items: center;
+  border-radius: 60px;
+  padding: 5px 5px;
+  backdrop-filter: blur(4px) saturate(180%);
+  height: 40px;
+  width: 35%;
+  margin-top: 2%;
+}
+
+.search-bar input {
+  background: transparent;
+  flex: 1;
+  border: 0;
+  outline: 0;
+  padding: 24px 24px;
+  font-size: 20px;
+  color: #cac7ff;
+}
+
+::placeholder {
+  color: #cac7ff;
+}
+
+.search-bar button img {
+  width: 25px;
+}
+
+.search-bar button {
+  border: 0;
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  background: #58629b;
+  cursor: pointer;
+}
